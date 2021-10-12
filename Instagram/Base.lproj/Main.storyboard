@@ -111,11 +111,79 @@
                         <viewLayoutGuide key="safeArea" id="kJN-dI-hFK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tHD-zN-hSD"/>
+                    <navigationItem key="navigationItem" id="tHD-zN-hSD">
+                        <barButtonItem key="rightBarButtonItem" image="Black-IG" style="plain" id="sDQ-7b-weO">
+                            <connections>
+                                <segue destination="ziv-XW-ROW" kind="presentation" id="QgX-sA-UDb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4M-fK-HMN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1660.8695652173915" y="41.517857142857139"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="3ZV-fv-CHb">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ziv-XW-ROW" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cHc-gg-hq5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grey-IG" translatesAutoresizingMaskIntoConstraints="NO" id="8mI-cf-hpO">
+                                <rect key="frame" x="20" y="44" width="374" height="374"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Qfv-JH-xuk"/>
+                                    <constraint firstAttribute="height" constant="374" id="ZrF-u5-TiQ"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nEY-AK-Fvi" appends="YES" id="9E5-Co-tar"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPQ-4O-3Ip">
+                                <rect key="frame" x="20" y="426" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZi-I0-xJ9">
+                                <rect key="frame" x="19" y="454" width="375" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="ziv-XW-ROW" eventType="touchUpInside" id="QVt-s5-QrH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="elm-aQ-7bz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tPQ-4O-3Ip" firstAttribute="centerX" secondItem="SZi-I0-xJ9" secondAttribute="centerX" id="096-Oe-Sj3"/>
+                            <constraint firstItem="elm-aQ-7bz" firstAttribute="trailing" secondItem="8mI-cf-hpO" secondAttribute="trailing" constant="20" id="7w1-uk-cTu"/>
+                            <constraint firstItem="tPQ-4O-3Ip" firstAttribute="trailing" secondItem="8mI-cf-hpO" secondAttribute="trailing" id="9Nm-wu-L9I"/>
+                            <constraint firstItem="SZi-I0-xJ9" firstAttribute="top" secondItem="8mI-cf-hpO" secondAttribute="bottom" constant="36" id="Idh-XE-aMa"/>
+                            <constraint firstItem="tPQ-4O-3Ip" firstAttribute="trailing" secondItem="SZi-I0-xJ9" secondAttribute="trailing" id="OOM-UV-13u"/>
+                            <constraint firstItem="tPQ-4O-3Ip" firstAttribute="leading" secondItem="8mI-cf-hpO" secondAttribute="leading" id="Szr-yh-AjO"/>
+                            <constraint firstItem="tPQ-4O-3Ip" firstAttribute="top" secondItem="8mI-cf-hpO" secondAttribute="bottom" constant="8" id="VJ8-Mh-Pd6"/>
+                            <constraint firstItem="8mI-cf-hpO" firstAttribute="top" secondItem="elm-aQ-7bz" secondAttribute="top" id="rbx-4q-Heq"/>
+                            <constraint firstItem="8mI-cf-hpO" firstAttribute="leading" secondItem="elm-aQ-7bz" secondAttribute="leading" constant="20" id="tYm-Ch-k48"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="tPQ-4O-3Ip" id="Vv4-rv-djs"/>
+                        <outlet property="imageView" destination="8mI-cf-hpO" id="Xj8-QB-N07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBW-C1-MCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nEY-AK-Fvi">
+                    <connections>
+                        <action selector="onCameraButton:" destination="ziv-XW-ROW" id="n3Q-dH-cDt"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2457.971014492754" y="36.830357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Med-ob-kMS">
@@ -137,6 +205,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Black-IG" width="25" height="25"/>
+        <image name="Grey-IG" width="375" height="375"/>
         <image name="Instagram Logo" width="255" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -20,6 +20,7 @@
 		D9FFFA87270E5DBE002CBDA4 /* InstagramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FFFA86270E5DBE002CBDA4 /* InstagramUITestsLaunchTests.swift */; };
 		D9FFFA94270E676C002CBDA4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FFFA93270E676C002CBDA4 /* LoginViewController.swift */; };
 		D9FFFA96270E678F002CBDA4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FFFA95270E678F002CBDA4 /* FeedViewController.swift */; };
+		D9FFFA9827149D33002CBDA4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FFFA9727149D33002CBDA4 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D9FFFA86270E5DBE002CBDA4 /* InstagramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D9FFFA93270E676C002CBDA4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D9FFFA95270E678F002CBDA4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		D9FFFA9727149D33002CBDA4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EA00B37DBA41769161296DB8 /* Pods-Instagram-InstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram-InstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-Instagram-InstagramUITests/Pods-Instagram-InstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				D9FFFA71270E5DBD002CBDA4 /* Info.plist */,
 				D9FFFA93270E676C002CBDA4 /* LoginViewController.swift */,
 				D9FFFA95270E678F002CBDA4 /* FeedViewController.swift */,
+				D9FFFA9727149D33002CBDA4 /* CameraViewController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9FFFA94270E676C002CBDA4 /* LoginViewController.swift in Sources */,
+				D9FFFA9827149D33002CBDA4 /* CameraViewController.swift in Sources */,
 				D9FFFA64270E5DB9002CBDA4 /* AppDelegate.swift in Sources */,
 				D9FFFA96270E678F002CBDA4 /* FeedViewController.swift in Sources */,
 				D9FFFA66270E5DB9002CBDA4 /* SceneDelegate.swift in Sources */,
